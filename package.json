@@ -1,0 +1,14 @@
+{
+  "name": "organa",
+  "private": true,
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "setup:local": "pnpm install && pnpm --filter @organa/shared build && pnpm --filter @organa/api build && pnpm --filter @organa/api db:migrate",
+    "demo:reset": "pnpm --filter @organa/api build && pnpm --filter @organa/api seed:demo",
+    "dev:api": "pnpm --filter @organa/api dev",
+    "dev:mobile": "pnpm --filter @organa/mobile start",
+    "build": "pnpm -r build",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm -r test"
+  }
+}
